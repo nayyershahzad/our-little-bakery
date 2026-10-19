@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Our Little Bakery — Pre-order lunch for your school or office</title>
+<meta name="description" content="Fresh pizza bites, chicken patties, muffins, naan khatai and cakes delivered to schools, showrooms and offices in Bahria Town & Rawalpindi. Order 8 hours ahead.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🥐%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <h1>Our <span>Little</span> Bakery</h1>
+    <p>Fresh-baked lunch boxes for schools, showrooms &amp; offices — Bahria Town, Rawalpindi &amp; Islamabad</p>
+    <div class="badge">Order at least 8 hours ahead · Free delivery on Rs 1,500+</div>
+  </header>
+
+  <div class="steps">
+    <div><b>1</b>Pick your items</div>
+    <div><b>2</b>Tell us when &amp; where</div>
+    <div><b>3</b>We bake &amp; deliver</div>
+  </div>
+
+  <form id="orderForm" class="grid" novalidate>
+    <section class="card">
+      <h2>Menu</h2>
+      <div id="menu"><p class="hint">Loading menu…</p></div>
+    </section>
+
+    <section class="card">
+      <h2>Delivery details</h2>
+      <label for="org_type">Where are we delivering?</label>
+      <select id="org_type" name="org_type" required>
+        <option value="school">School / college</option>
+        <option value="showroom">Motor showroom</option>
+        <option value="office">Office</option>
+        <option value="other">Other</option>
+      </select>
+      <label for="org_name">Organisation name</label>
+      <input type="text" id="org_name" name="org_name" placeholder="e.g. Beaconhouse Bahria Phase 4" required maxlength="120">
+      <label for="contact_name">Your name</label>
+      <input type="text" id="contact_name" name="contact_name" placeholder="Contact person" required maxlength="80">
+      <label for="phone">WhatsApp / mobile</label>
+      <input type="tel" id="phone" name="phone" placeholder="03xx-xxxxxxx" required inputmode="tel">
+      <label for="address">Delivery address</label>
+      <textarea id="address" name="address" placeholder="Gate / reception, street, phase, sector" required maxlength="300"></textarea>
+      <label for="delivery_at">Deliver on</label>
+      <input type="datetime-local" id="delivery_at" name="delivery_at" required step="900">
+      <p class="hint" id="leadHint">Earliest slot shown is 8 hours from now. Deliveries 8:00–20:00.</p>
+      <label for="notes">Notes (optional)</label>
+      <textarea id="notes" name="notes" placeholder="Allergies, individual boxes, invoice name…" maxlength="500"></textarea>
+
+      <div class="totals">
+        <div><span>Subtotal</span><span id="subtotal">Rs 0</span></div>
+        <div><span>Delivery</span><span id="delivery">Rs 0</span></div>
+        <div class="grand"><span>Total</span><span id="total">Rs 0</span></div>
+      </div>
+      <button class="btn" id="submitBtn" type="submit">Place pre-order</button>
+      <p class="hint">Payment: cash or bank transfer on delivery. We'll confirm on WhatsApp.</p>
+      <div class="msg" id="msg"></div>
+    </section>
+  </form>
+
+  <section class="card" style="margin-top:16px">
+    <h2>Track an order</h2>
+    <div class="toolbar">
+      <input type="text" id="trackId" placeholder="Order ID e.g. OLB-251021-7F3K" maxlength="16">
+      <input type="text" id="trackPhone" placeholder="Last 4 digits of phone" maxlength="4" inputmode="numeric">
+      <button class="btn ghost" style="width:auto;margin:0" id="trackBtn" type="button">Check</button>
+    </div>
+    <div id="trackOut" class="hint"></div>
+  </section>
+
+  <footer>Our Little Bakery · Bahria Town, Rawalpindi · <a id="waLink" href="#">WhatsApp us</a></footer>
+</div>
+<script src="/app.js"></script>
+</body>
+</html>

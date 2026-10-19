@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Kitchen — Our Little Bakery</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="hero"><h1>Kitchen <span>orders</span></h1><p>Pick-up list for baking and delivery</p></header>
+  <section class="card">
+    <div class="toolbar">
+      <input type="password" id="token" placeholder="Admin token" autocomplete="current-password">
+      <input type="date" id="day">
+      <select id="status">
+        <option value="">All statuses</option>
+        <option value="new">New</option><option value="confirmed">Confirmed</option>
+        <option value="preparing">Preparing</option><option value="delivered">Delivered</option><option value="cancelled">Cancelled</option>
+      </select>
+      <button class="btn" style="width:auto;margin:0" id="load" type="button">Load</button>
+      <button class="btn ghost" style="width:auto;margin:0" id="print" type="button">Print bake list</button>
+    </div>
+    <div id="summary" class="hint"></div>
+    <div id="list"></div>
+  </section>
+</div>
+<script src="/admin.js"></script>
+</body>
+</html>
