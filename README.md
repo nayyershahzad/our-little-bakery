@@ -76,3 +76,4 @@ the last 4 digits of their phone.
 wrangler pages dev public --d1 DB=our-little-bakery --kv RATE --binding ADMIN_TOKEN=test
 # then: wrangler d1 execute our-little-bakery --local --file=migrations/0001_init.sql
 ```
+
