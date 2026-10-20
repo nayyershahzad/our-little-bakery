@@ -15,6 +15,15 @@ header.hero h1{font-family:"Fraunces",Georgia,serif;font-size:clamp(32px,6vw,52p
 header.hero h1 span{color:var(--brand)}
 header.hero p{color:var(--muted);margin:8px 0 0}
 .badge{display:inline-block;background:var(--accent);color:#2b1d14;font-weight:800;border-radius:999px;padding:6px 14px;font-size:14px;margin-top:12px}
+/* hero with artwork */
+.hero-img{display:grid;grid-template-columns:1fr;gap:8px;text-align:center;padding:16px 0 0}
+.hero-pic{width:100%;height:auto;border-radius:var(--radius);display:block}
+@media(min-width:760px){
+  .hero-img{grid-template-columns:1.1fr .9fr;align-items:center;text-align:start;padding:24px 0 8px}
+  .hero-text h1{font-size:clamp(40px,5vw,60px)}
+}
+.item .thumb{width:72px;height:72px;border-radius:14px;object-fit:cover;flex:0 0 72px;background:var(--bg)}
+.item .info{flex:1;min-width:0}
 .grid{display:grid;grid-template-columns:1fr;gap:16px}
 @media(min-width:760px){.grid{grid-template-columns:1.1fr .9fr}}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px}

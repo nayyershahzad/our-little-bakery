@@ -16,7 +16,8 @@
       const row = document.createElement('div');
       row.className = 'item';
       row.innerHTML = `
-        <div><div class="name">${m.name}</div>
+        <img class="thumb" src="/img/${m.sku}.webp" alt="" width="72" height="72" loading="lazy">
+        <div class="info"><div class="name">${m.name}</div>
              <div class="meta">${rs(m.price)} / ${m.unit}${m.min > 1 ? ` · min ${m.min}` : ''}</div></div>
         <div class="qty">
           <button type="button" data-sku="${m.sku}" data-d="-1" aria-label="less">−</button>
