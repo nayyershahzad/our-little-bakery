@@ -1,5 +1,5 @@
 (() => {
-  const WHATSAPP = '923000000000'; // <- put the bakery WhatsApp number here (country code, no +)
+  const WHATSAPP = '923320808986';
   document.getElementById('waLink').href = `https://wa.me/${WHATSAPP}`;
 
   const $ = s => document.querySelector(s);
